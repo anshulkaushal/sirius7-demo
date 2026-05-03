@@ -25,7 +25,7 @@ const articles = [
     summary: "A comprehensive guide to planning, executing, and optimising your Oracle Fusion Cloud migration with minimal disruption.",
     category: "Oracle",
     date: "March 20, 2026",
-    author: "Pratheek",
+    author: "Prateek Tall",
     readTime: "6 min read",
   },
   {
