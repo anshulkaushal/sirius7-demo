@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# App Platform / CI: single lockfile (npm); ignore Bun locks if using Bun locally
+bun.lock
+bun.lockb
+
 node_modules
 dist
 dist-ssr
