@@ -7,7 +7,7 @@ import AIChatbot from "./AIChatbot";
 const Layout = ({ children }: { children: ReactNode }) => (
   <div className="min-h-screen flex flex-col">
     <Header />
-    <main className="flex-1">{children}</main>
+    <main className="min-w-0 flex-1 overflow-x-clip">{children}</main>
     <Footer />
     <ScrollToTopButton />
     <AIChatbot />

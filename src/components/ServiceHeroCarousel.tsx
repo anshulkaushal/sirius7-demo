@@ -147,7 +147,7 @@ const ServiceHeroCarousel = () => {
         </div>
       </div>
 
-      {/* Progress dots */}
+      {/* Slide indicators (no timed “progress bar” — that read as page loading / refresh) */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
         {slides.map((_, i) => (
           <button
@@ -159,17 +159,6 @@ const ServiceHeroCarousel = () => {
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
-      </div>
-
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-10">
-        <motion.div
-          key={current}
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: INTERVAL / 1000, ease: "linear" }}
-          className="h-full bg-primary"
-        />
       </div>
     </section>
   );

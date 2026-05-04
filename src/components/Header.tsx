@@ -63,10 +63,6 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-sm relative overflow-visible">
-      {/* Electric blue spark line — clipped to header; animation uses %/px only (no 100vw) */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] overflow-hidden">
-        <div className="absolute top-0 h-full w-20 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80 animate-[spark-slide_3s_linear_infinite]" />
-      </div>
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0">

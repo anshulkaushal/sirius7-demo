@@ -102,6 +102,12 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    overflow-x: clip;
+  }
+
+  #root {
+    min-width: 0;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -112,7 +118,8 @@
 @layer components {
   .section-padding {
     @apply py-20 md:py-24 lg:py-28;
-    border-bottom: 1px solid hsl(var(--primary) / 0.12);
+    /* Subtle divider — avoid primary-tinted stripes that read like loading/progress UI */
+    border-bottom: 1px solid hsl(var(--border) / 0.45);
   }
 
   .section-ghost {
@@ -206,8 +213,8 @@
 
   /* Glow pulse */
   @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 15px hsl(var(--primary) / 0.3); }
-    50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.5), 0 0 60px hsl(var(--primary) / 0.2); }
+    0%, 100% { box-shadow: 0 0 8px hsl(var(--primary) / 0.22); }
+    50% { box-shadow: 0 0 16px hsl(var(--primary) / 0.35), 0 0 24px hsl(var(--primary) / 0.12); }
   }
 
   .animate-glow-pulse {
@@ -245,16 +252,6 @@
       linear-gradient(hsl(var(--primary) / 0.04) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--primary) / 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
-  }
-}
-
-/* Slide within header width — do not use 100vw (scrollbar gutter causes page-wide overflow + bottom bar) */
-@keyframes spark-slide {
-  0% {
-    left: -80px;
-  }
-  100% {
-    left: 100%;
   }
 }
 

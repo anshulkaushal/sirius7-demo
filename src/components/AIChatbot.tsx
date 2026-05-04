@@ -62,7 +62,7 @@ const AIChatbot = () => {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-24 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-110 transition-all duration-300 animate-glow-pulse border border-primary/30"
+          className="fixed bottom-24 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-110 transition-all duration-300 border border-primary/30"
           aria-label="Open AI Assistant"
         >
           <MessageCircle size={24} />
@@ -71,7 +71,7 @@ const AIChatbot = () => {
 
       {/* Chat Window */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-4rem)] rounded-2xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-2xl shadow-primary/10 flex flex-col animate-scale-in overflow-hidden">
+        <div className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[min(360px,calc(100%-2rem))] h-[520px] max-h-[calc(100dvh-4rem)] rounded-2xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-2xl shadow-primary/10 flex flex-col animate-scale-in overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-4 border-b border-border/50 bg-primary/5">
             <div className="flex items-center gap-3">
