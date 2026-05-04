@@ -95,6 +95,11 @@
     @apply border-border;
   }
 
+  /* Avoid horizontal scrollbar from off-screen animations (e.g. 100vw vs layout width) */
+  html {
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
@@ -243,9 +248,14 @@
   }
 }
 
+/* Slide within header width — do not use 100vw (scrollbar gutter causes page-wide overflow + bottom bar) */
 @keyframes spark-slide {
-  0% { transform: translateX(-80px); }
-  100% { transform: translateX(100vw); }
+  0% {
+    left: -80px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* Shine sweep for service tiles */
