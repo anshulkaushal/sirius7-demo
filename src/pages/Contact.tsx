@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import ParticleField from "@/components/ParticleField";
 import { Button } from "@/components/ui/button";
@@ -47,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <>
       {/* ── Hero Section ── */}
       <section className="relative overflow-hidden">
         <img src={heroContact} alt="" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-[1.02]" width={1920} height={800} />
@@ -304,7 +303,7 @@ const Contact = () => {
         </div>
       </section>
 
-    </Layout>
+    </>
   );
 };
 

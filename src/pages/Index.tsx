@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
-import Layout from "@/components/Layout";
 import ServiceHeroCarousel from "@/components/ServiceHeroCarousel";
 import ParticleField from "@/components/ParticleField";
 import {
@@ -39,7 +38,7 @@ const globalDelivery = [
 ];
 
 const Index = () => (
-  <Layout>
+  <>
     <ServiceHeroCarousel />
 
     {/* Services */}
@@ -160,7 +159,7 @@ const Index = () => (
         </AnimatedSection>
       </div>
     </section>
-  </Layout>
+  </>
 );
 
 export default Index;

@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Home, Briefcase, Brain, Truck, Info, Mail, Database, Cloud, Users, GitBranch, Settings2, BarChart3, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,10 +31,9 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Sync activeHash with location.hash
-  useState(() => {
+  useEffect(() => {
     setActiveHash(location.hash);
-  });
+  }, [location.hash]);
 
   const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/" && !activeHash;

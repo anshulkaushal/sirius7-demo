@@ -1,4 +1,3 @@
-import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import ParticleField from "@/components/ParticleField";
 import heroAbout from "@/assets/hero-about.jpg";
@@ -40,7 +39,7 @@ const expertise = [
 ];
 
 const About = () => (
-  <Layout>
+  <>
     {/* Hero */}
     <section className="relative section-padding overflow-hidden">
       <img src={heroAbout} alt="" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-[1.02]" width={1920} height={800} />
@@ -142,7 +141,7 @@ const About = () => (
         </div>
       </div>
     </section>
-  </Layout>
+  </>
 );
 
 export default About;

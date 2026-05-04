@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import ParticleField from "@/components/ParticleField";
 import BackButton from "@/components/BackButton";
@@ -18,7 +17,7 @@ interface ServicePageProps {
 }
 
 const ServicePageTemplate = ({ icon: Icon, iconImg, title, subtitle, overview, offerings, benefits }: ServicePageProps) => (
-  <Layout>
+  <>
     {/* Hero — theme-adaptive */}
     <section className="relative section-padding overflow-hidden section-dark-adaptive">
       <ParticleField count={35} />
@@ -114,7 +113,7 @@ const ServicePageTemplate = ({ icon: Icon, iconImg, title, subtitle, overview, o
         </AnimatedSection>
       </div>
     </section>
-  </Layout>
+  </>
 );
 
 export default ServicePageTemplate;

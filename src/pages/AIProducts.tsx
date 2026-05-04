@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackButton from "@/components/BackButton";
 import ParticleField from "@/components/ParticleField";
@@ -40,7 +39,7 @@ const capabilities = [
 ];
 
 const AIProducts = () => (
-  <Layout>
+  <>
     {/* Hero */}
     <section className="relative section-padding overflow-hidden">
       <img src={heroAi} alt="" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-[1.02]" width={1920} height={800} />
@@ -129,7 +128,7 @@ const AIProducts = () => (
         </AnimatedSection>
       </div>
     </section>
-  </Layout>
+  </>
 );
 
 export default AIProducts;

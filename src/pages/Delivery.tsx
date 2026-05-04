@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import BackButton from "@/components/BackButton";
 import ParticleField from "@/components/ParticleField";
@@ -26,7 +25,7 @@ const offshoreModel = [
 ];
 
 const Delivery = () => (
-  <Layout>
+  <>
     <section className="relative section-padding overflow-hidden">
       <img src={heroDelivery} alt="" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-[1.02]" width={1920} height={800} />
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(222,47%,4%)]/85 to-[hsl(222,47%,4%)]/75" />
@@ -87,7 +86,7 @@ const Delivery = () => (
         </div>
       </div>
     </section>
-  </Layout>
+  </>
 );
 
 export default Delivery;

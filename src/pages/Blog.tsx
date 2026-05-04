@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import ParticleField from "@/components/ParticleField";
 import BackButton from "@/components/BackButton";
@@ -106,7 +105,7 @@ const Blog = () => {
     : articles.filter((a) => a.category === activeCategory);
 
   return (
-    <Layout>
+    <>
       {/* Hero */}
       <section className="relative section-padding overflow-hidden">
         <img src={heroBlog} alt="" className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-[1.02]" width={1920} height={800} />
@@ -301,7 +300,7 @@ const Blog = () => {
           </AnimatedSection>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
